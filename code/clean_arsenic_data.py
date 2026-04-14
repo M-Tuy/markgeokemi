@@ -12,3 +12,5 @@ arsenic_icpms_clean= arsenic_icpms.dropna(
 arsenic_icpms_clean.to_file(
     "C:/Projects/markgeokemi/cleaned_data/arsenic_icpms_clean.gpkg", driver="GPKG"
 ) #save in cleaned data
+arsenic_icpms_clean = arsenic_icpms_clean.set_crs("EPSG:3006", allow_override=True)#assign CRS, update
+arsenic_icpms_clean.crs# 
