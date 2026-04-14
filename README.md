@@ -1,6 +1,6 @@
 # Geologiska arsenikhotspots i fokus 
 
-The mini-project assess SGU reginal geological data to identify geospatial patterns of arsenic occurence in the Swedish moraine fine soils. Mapping hotspots of arsenic levels was in the project focus. 
+The mini-project assesses SGU regional geological data to identify geospatial patterns of arsenic occurence in the Swedish moraine. Mapping hotspots of arsenic levels was the focus. 
 
 ## Data
 ## Information on how the work done
