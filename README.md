@@ -24,6 +24,47 @@ prov_artal
 provtyp
 geometry
 
+# Results
+
+## Hotspots
+
+![Arsenic hotsopts](as_icpms_hotspots_map.png) 
+
+The defined arsenic hotspot- the 95% percentile arsenic concentration is 13.0 ppm,
+-95% of samples have arsenic ≤ 13.0 ppm
+-top 5% have arsenic > 13 ppm, those top 5% are your hotspot candidates.
+Hotspot threshold (95th percentile): 13.00 ppm
+Number of hotspot samples: 1419
+
+
+### summary stats
+
+summary:
+count    28077.00
+mean         3.71
+std          8.42
+min          0.10
+25%          0.80
+50%          1.60
+75%          3.80
+max        481.90
+Name: as_ppm, dtype: float64
+ Median 1.60
+Skewness 23.12 
+Data are highly right-skewed as the skewness is positive. Most swedish morraine samples have low arsenic concentration. and a very small number of samples have elevated concentration.
+
+here mean is much higher than median, mean the median is representable.
+It is even clear from the median value of 1.6 ppm vers 481.9
+
+### Arsenic distribution characteristics
+The arsenic dataset (n = 28,077) shows a highly right-skewed distribution (skewness = 23.12), indicating that most moraine samples contain low arsenic concentrations, while a limited number of locations exhibit extreme elevated values. The large difference between median (1.60 ppm) and mean (3.71 ppm) confirms the presence of high-value outliers, supporting percentile-based hotspot classification rather than mean-based thresholds.
+
+
+
+
+
+
+
 
 ## Information on how the work done
 Downloade markgeokemi data from SGU. One file "markgeokemi_regional.gpkg" is was large, so was not pushed to the Git rep.
