@@ -1,4 +1,4 @@
-# Geologiska arsenikhotspots i fokus 
+# Geological arsenic hotspots in focus
 
 The mini-project assesses SGU regional geological data to identify geospatial patterns of arsenic occurence in the Swedish moraine. Mapping hotspots of arsenic levels was the focus. 
 

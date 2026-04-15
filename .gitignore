@@ -5,3 +5,4 @@ anaconda_projects/
 cleaned_data/arsenic_icpms_clean.gpkg
 Pandas.ipynb
 cleaned_data/markgeokemi_icpms_clean.gpkg
+GeoPandas_and_Pandas.ipynb
