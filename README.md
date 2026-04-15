@@ -28,7 +28,7 @@ geometry
 
 ## Hotspots
 
-![Arsenic hotsopts](as_icpms_hotspots_map.png) 
+![Arsenic hotspots](results/as_icpms_hotspots_map.png)
 
 The defined arsenic hotspot- the 95% percentile arsenic concentration is 13.0 ppm,
 -95% of samples have arsenic ≤ 13.0 ppm
