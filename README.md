@@ -68,6 +68,12 @@ Build a clean, structured uranium geodata foundation.
 - validate coordinate consistency
 - create hotspot labels
 
+**01_build_uranium_dataset.py
+02_hotspot_mapping.py
+03_train_risk_model.py
+04_driver_analysis.py
+05_groundwater_overlay.py**
+                  
 ### Tools / Skills:
 - Python
 - pandas
@@ -75,6 +81,23 @@ Build a clean, structured uranium geodata foundation.
 - numpy
 
 ### Deliverables:
+
+summary:
+count    28470.00
+mean         2.04
+std          1.92
+min          0.10
+25%          1.10
+50%          1.60
+75%          2.40
+max         75.60
+Name: u_ppm, dtype: float64
+ Median 1.60
+Skewness 11.52
+Uranium hotspt conc: 4.7, elevated conc: 2.4, median conc: 1.6, and lower conc1.1
+Hotspot threshold (95th percentile): 4.70 ppm
+Number of hotspot samples: 1427
+
 - cleaned uranium geodataset
 - processed GeoDataFrame
 - hotspot-tagged dataset
