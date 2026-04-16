@@ -1,13 +1,14 @@
-# Geological Arsenic Hotspots in Focus  
-### Spatial Screening of Arsenic Occurrence in Swedish Moraine Deposits
+# Geological arsenic occurence in Swedish mmoraine deposits   
+### Spatial screening of arsenic hotspots 
 
 ---
 ## Executive Summary
 
 This mini technical project evaluates SGU regional geochemical data to identify elevated arsenic concentrations in Swedish moraine deposits, with focus on the Uppsala–Stockholm region. The purpose is to detect arsenic hotspot zones that may indicate groundwater concern areas. A geospatial screening workflow was developed using arsenic concentration data (`as_ppm`), associated geochemical variables, and GIS groundwater layers. The output consists of hotspot classification maps and groundwater relevance screening overlays designed for early-stage environmental assessment.
-
+´
 ---
-
+hotspot arsenic vs Fe levels
+hotspot arsenic vs pH values
 ## 1. Objective
 
 The objective of this project is to identify elevated arsenic hotspot zones in moraine geochemistry data and assess their potential spatial relevance to groundwater-sensitive areas.
