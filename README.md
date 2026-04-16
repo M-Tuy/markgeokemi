@@ -1,10 +1,11 @@
 # Geogenic Uranium Risk Zonation in Swedish Moraine  
-### IEnvironmental Geodata Intelligence Project
-
-This project builds a practical geospatial risk intelligence workflow for identifying elevated uranium zones in Swedish moraine and estimating potential groundwater exposure hotspots.
+### ***Environmental Geodata Intelligence Project***
 ---
 
-# Project Goal
+This project builds a practical geospatial risk intelligence workflow for identifying elevated uranium zones in Swedish moraine and estimating potential groundwater exposure hotspots.
+
+
+## Project Goal
 
 Transform SGU regional geochemical uranium data into:
 
