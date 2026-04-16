@@ -1,5 +1,5 @@
 # Uranium risk zonation in Swedish Moraine deposits 
-##***Environmental Geodata Intelligence Project***
+***Environmental Geodata Intelligence Project***
 ---
 
 This project builds a practical geospatial risk intelligence workflow for identifying elevated uranium zones in Swedish moraine and estimating potential groundwater exposure hotspots.
