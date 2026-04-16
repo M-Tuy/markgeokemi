@@ -1,4 +1,4 @@
-# Geogenic Uranium Risk Zonation in Swedish Moraine  
+# Geogenic uranium risk zonation in Swedish Moraine deposits 
 ### ***Environmental Geodata Intelligence Project***
 ---
 
