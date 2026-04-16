@@ -1,376 +1,181 @@
-# Uranium risk zonation in Swedish Moraine deposits 
-***Environmental Geodata Intelligence Project***
+# Geological Arsenic Hotspots in Focus  
+### Spatial Screening of Arsenic Occurrence in Swedish Moraine Deposits
+
 ---
+## Executive Summary
 
-This project builds a practical geospatial risk intelligence workflow for identifying elevated uranium zones in Swedish moraine and estimating potential groundwater exposure hotspots.
-
-
-## Project Goal
-
-Transform SGU regional geochemical uranium data into:
-
-1. Uranium hotspot intelligence maps  
-2. Predictive uranium risk zonation maps  
-3. Geological driver analysis dashboards  
-4. Groundwater exposure screening layers  
-
-This project demonstrates technical capabilities used in:
-
-- environmental consulting
-- contaminated land assessment
-- groundwater risk screening
-- geospatial environmental intelligence
-- regulatory environmental agencies
-
-
-### Geospatial Data Engineering
-- geospatial data cleaning
-- coordinate handling
-- spatial joins
-- GIS layer integration
-
-### Environmental Data Analytics
-- anomaly detection
-- hotspot thresholding
-- skewed environmental dataset interpretation
-
-### Predictive Modeling
-- random forest classification
-- probability mapping
-- model validation
-
-### Spatial Risk Intelligence
-- hotspot clustering
-- risk zonation
-- exposure overlay modeling
-
-### Environmental Interpretation
-- uranium mobility logic
-- groundwater relevance screening
-- geology-based risk drivers
+This mini technical project evaluates SGU regional geochemical data to identify elevated arsenic concentrations in Swedish moraine deposits, with focus on the Uppsala–Stockholm region. The purpose is to detect arsenic hotspot zones that may indicate groundwater concern areas. A geospatial screening workflow was developed using arsenic concentration data (`as_ppm`), associated geochemical variables, and GIS groundwater layers. The output consists of hotspot classification maps and groundwater relevance screening overlays designed for early-stage environmental assessment.
 
 ---
 
-# Project Architecture
+## 1. Objective
 
+The objective of this project is to identify elevated arsenic hotspot zones in moraine geochemistry data and assess their potential spatial relevance to groundwater-sensitive areas.
 
-
-# Phase 1 — Geochemical Data Processing Pipeline
-
-### Objective:
-Build a clean, structured uranium geodata foundation.
-
-### Tasks:
-- import SGU markgeokemi dataset
-- extract uranium, pH, calcium, coordinates
-- clean missing values
-- remove duplicates
-- validate coordinate consistency
-- create hotspot labels
-
-**01_build_uranium_dataset.py
-02_hotspot_mapping.py
-03_train_risk_model.py
-04_driver_analysis.py
-05_groundwater_overlay.py**
-                  
-### Tools / Skills:
-- Python
-- pandas
-- geopandas
-- numpy
-
-### Deliverables:
-
-summary:
-count    28470.00
-mean         2.04
-std          1.92
-min          0.10
-25%          1.10
-50%          1.60
-75%          2.40
-max         75.60
-Name: u_ppm, dtype: float64
- Median 1.60
-Skewness 11.52
-Uranium hotspt conc: 4.7, elevated conc: 2.4, median conc: 1.6, and lower conc1.1
-Hotspot threshold (95th percentile): 4.70 ppm
-Number of hotspot samples: 1427
-
-- cleaned uranium geodataset
-- processed GeoDataFrame
-- hotspot-tagged dataset
+### Screening Question
+Where are arsenic concentrations elevated enough to warrant groundwater attention?
 
 ---
 
-# Phase 2 — Uranium Hotspot Intelligence Mapping
+## 2. Data and Study Area
 
-### Objective:
-Identify statistically elevated uranium zones.
+### Study Area
+Target screening region:
+**Uppsala–Stockholm region, Central Sweden**
 
-### Tasks:
-- compute percentile thresholds
-- define 95th percentile uranium anomaly threshold
-- classify hotspot samples
-- create uranium hotspot map
-- visualize concentration gradients
+### Data Source
+SGU Regional Geochemistry Dataset (Morainic ICP-MS)
 
-### Tools / Skills:
-- descriptive statistics
-- percentile anomaly logic
-- matplotlib
-- geopandas plotting
-
-### Deliverables:
-- uranium hotspot map
-- anomaly threshold report
-- hotspot candidate layer
-
----
-
-# Phase 3 — Spatial Prediction Engine
-
-### Objective:
-Predict elevated uranium probability in unsampled areas.
-
-### Tasks:
-- create hotspot classification target
-- train random forest model
-- predict hotspot probability
-- generate uranium probability surface
-
-### Input Predictors:
+### Variables Used
+- arsenic (`as_ppm`)
 - pH
+- Fe
 - calcium
-- Fe (if available)
-- lithology
-- coordinates
+- geometry
+- northing (`ns`)
+- easting (`ew`)
 
-### Tools / Skills:
-- scikit-learn
-- random forest classifier
-- train/test split
-- ROC-AUC validation
-
-### Deliverables:
-- trained prediction model
-- probability risk map
-- model performance metrics
+SGU regional geochemistry includes arsenic as `as_ppm` in morainic ICP-MS analytical tables, making it directly suitable for hotspot screening.
 
 ---
 
-# Phase 4 — Geological Driver Intelligence
+## 3. Methodology
 
-### Objective:
-Identify what controls uranium enrichment.
+### 3.1 Dataset Construction
+- Imported SGU geochemical dataset
+- Extracted arsenic-related variables
+- Subsetted target geographic region
 
-### Tasks:
-- rank variable importance
-- compare geological drivers
-- analyze predictor influence
+### 3.2 Data Cleaning
+Removed:
+- missing arsenic values
+- duplicate records
+- invalid coordinates
 
-### Tools / Skills:
-- feature importance analysis
-- permutation importance
-- partial dependence interpretation
+Validated:
+- arsenic units consistency (ppm)
 
-### Deliverables:
-- driver ranking chart
-- geological influence summary
+Converted cleaned dataset into GeoDataFrame.
 
----
+### 3.3 Hotspot Classification
+Arsenic concentrations classified into screening categories:
 
-# Phase 5 — Groundwater Exposure Screening Layer
+| Class     | As ppm |
+|-----------|--------|
+| Low       | ≤ Q1 |
+| Typical   | Q1 – Median |
+| Elevated  | Median – 95th percentile |
+| Hotspot   | > 95th percentile |
 
-### Objective:
-Estimate where uranium hazard may intersect groundwater exposure risk.
+Percentile thresholds were calculated directly from dataset distribution.
 
-### Overlay Inputs:
-- uranium probability zones
-- aquifer layers
-- private well proxy layers
-- groundwater vulnerability layers
+### 3.4 Spatial Mapping
+Generated hotspot concentration map showing:
+- all arsenic sample points
+- hotspot anomalies highlighted
 
-### Tasks:
-- overlay hazard + pathway + receptor layers
-- identify exposure-priority zones
+### 3.5 Groundwater Overlay
+Overlay analysis performed using:
+- aquifer polygons / groundwater bodies
+- arsenic hotspot layer
 
-### Tools / Skills:
-- GIS overlay analysis
-- QGIS spatial layer integration
-- geospatial risk screening
-
-### Deliverables:
-- groundwater exposure screening map
-- priority zone identification layer
+Purpose:
+identify overlap zones where elevated arsenic may affect groundwater-sensitive areas.
 
 ---
 
-# Software Stack
+## 4. Results
+
+### 4.1 Arsenic Hotspot Identification
+Hotspot zones represent arsenic concentrations above the 95th percentile threshold and indicate statistically elevated anomaly concentrations.
+
+### 4.2 Spatial Pattern Observations
+Analysis identifies:
+- clustered arsenic anomaly zones
+- localized concentration hotspots rather than uniform distribution
+
+### 4.3 Groundwater Relevance
+Overlay mapping highlights:
+- hotspot-groundwater intersection areas
+- proximity concern zones requiring further screening
 
 ---
 
-## Core Programming Stack
+## 5. Maps Produced
 
-### Python Libraries:
+### Map 1 — Arsenic Concentration Hotspot Map
+Displays arsenic anomaly concentrations across the study region.
+
+### Map 2 — Hotspot Classification Map
+Shows categorized arsenic screening classes.
+
+### Map 3 — Groundwater Relevance Screening Map
+Displays overlap between arsenic hotspots and groundwater-sensitive areas.
+
+---
+
+## 6. Interpretation
+
+### Spatial Interpretation
+Clustered hotspot patterns suggest localized geological controls rather than diffuse regional enrichment.
+
+### Geological Interpretation
+Possible controls include:
+- lithological source influence
+- redox-sensitive mobilization conditions
+- Fe-associated arsenic release pathways
+
+### Groundwater Implication
+Hotspot overlap with aquifer zones indicates priority areas for groundwater verification and targeted sampling.
+
+---
+
+## 7. Python Workflow Structure
+
+### Script 1 — `01_build_arsenic_dataset.py`
+Tasks:
+- import SGU data
+- clean records
+- create GeoDataFrame
+
+### Script 2 — `02_classify_hotspots.py`
+Tasks:
+- compute percentiles
+- assign hotspot classes
+
+### Script 3 — `03_hotspot_groundwater_map.py`
+Tasks:
+- create hotspot map
+- groundwater overlay map
+
+---
+
+## 8. Software Stack
+
+### Python
 - pandas
 - geopandas
-- numpy
 - matplotlib
-- scikit-learn
-- shapely
-- rasterio
+- numpy
 
----
-
-## GIS Platform:
-### QGIS
-
-Used for:
-- geology overlays
-- aquifer layers
-- map validation
-- final visualization exports
-
----
-
-## Optional Advanced Spatial Tool:
-### PyKrige
-
-Use if adding:
-- kriging interpolation
-- geostatistical prediction surfaces
-
----
-
-# Recommended Learning Stack
-
----
-
-## 1. Machine Learning
-### HarvardX CS109x
-
-Use for:
-- decision trees
-- random forest modeling
-- boosting methods
-
----
-
-## 2. GIS Spatial Skills
-Need:
-### QGIS practical training
-
-Learn:
-- shapefile handling
-- raster overlays
-- layer joins
-
----
-
-## 3. Spatial Analytics Upgrade
-Learn:
-- Moran’s I
-- hotspot clustering
-- spatial autocorrelation
-
----
-
-## 4. Environmental Geochemistry Upgrade
-Need:
-- uranium mobility interpretation
-- pH-carbonate uranium chemistry basics
+### GIS
+- QGIS
 
 Optional:
-- PHREEQC intro
+- shapely
 
 ---
 
-# Dataset Sources
+## 9. Deliverables
 
-### Primary:
-SGU Markgeokemi Regional Dataset
-
-### Additional:
-- SGU geological layers
-- SGU groundwater layers
-- aquifer datasets
-- bedrock maps
+1. Clean arsenic dataset  
+2. Hotspot classified GIS layer  
+3. Arsenic hotspot map  
+4. Groundwater screening map  
+5. Technical report PDF  
 
 ---
 
-# Final Output Portfolio Package
+## 10. Conclusion
 
-At completion this project produces:
-
-### Maps:
-1. Uranium hotspot map  
-2. Uranium probability risk zonation map  
-3. Geological driver map  
-4. Groundwater exposure screening map  
-
-### Technical Outputs:
-- predictive ML model
-- reusable geospatial workflow
-- environmental risk intelligence pipeline
-
----
-
-# Why This Project Matters Professionally
-
-This is not a descriptive academic exercise.
-
-This project demonstrates ability to build:
-### decision-support environmental intelligence systems
-
-That is directly relevant for:
-- environmental consulting companies
-- groundwater agencies
-- mining/environmental regulators
-- geospatial environmental analytics roles
-
----
-
-# Career Value
-
-This project positions your profile toward:
-
-### Target roles:
-- Environmental Data Analyst
-- Geospatial Environmental Consultant
-- Groundwater Risk Analyst
-- Environmental GIS Specialist
-- Contaminated Land Data Analyst
-
----
-
-# Development Priority Order
-
-Build in this sequence:
-
-1. Phase 1 → data pipeline  
-2. Phase 2 → hotspot mapping  
-3. Phase 3 → prediction model  
-4. Phase 4 → driver analysis  
-5. Phase 5 → exposure screening  
-
----
-
-# Current Project Status
-
-[x] uranium data extraction started  
-[x] hotspot threshold identified  
-[x] exploratory mapping underway  
-[ ] predictive model pending  
-[ ] groundwater overlay pending  
-
----
-
-# End Goal
-
-Create a deployable environmental geodata intelligence workflow that converts raw SGU uranium measurements into actionable groundwater risk screening outputs.
-
-
-
-
+This project demonstrates a compact environmental geodata workflow for identifying arsenic hotspots and screening their groundwater relevance in Swedish moraine systems. The approach provides a practical decision-support screening tool applicable to environmental consulting, groundwater agencies, and regional risk assessment contexts.
