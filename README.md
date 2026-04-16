@@ -1,4 +1,131 @@
-# Geological arsenic hotspots in focus
+# Geogenic uranium risk zonation in swedish moraine
+- ## ***Predicting potential groundwater xposure hotspots***
+
+
+# Part I — Geospatial screening of uranium occurrence 
+
+
+## Goal
+
+understand SGU dataset structure,
+learn geospatial geochemical workflows,
+characterize uranium distribution statistically.
+
+
+## Objectives
+Clean and organize SGU uranium dataset.
+Describe uranium concentration distribution.
+Identify statistical hotspots.
+Visualize spatial uranium occurrence patterns.
+
+## Methods
+Data:
+SGU markgeokemi regional dataset
+uranium concentration (u_ppm)
+pH
+Ca
+coordinates
+Analyses:
+descriptive statistics
+skewness analysis
+percentile hotspot thresholding (95th percentile)
+hotspot mapping
+exploratory scatterplots:
+U vs pH
+U vs Ca
+
+## Expected outputs:
+hotspot map,
+summary statistics,
+anomaly threshold map,
+first interpretation of uranium clustering.
+Value of Part I:
+
+
+
+# Part II — Predicting potential groundwater exposure hotspots
+
+
+
+## OBJECTIVES
+### Objective 1:
+
+Predict uranium risk zones spatially
+
+Build predictive maps for unsampled areas.
+
+Instead of point-only mapping:
+Estimate probability surfaces.
+
+## Methods:
+
+random forest classification,
+kriging,
+logistic regression hotspot probability model.
+
+Output:
+
+probability map of elevated uranium occurrence.
+Objective 2:
+Identify geological controls
+
+Determine what explains enrichment.
+
+Predictors:
+
+pH,
+calcium,
+bedrock type,
+moraine parent lithology,
+geological province.
+
+Output:
+
+Example:
+“Calcium and granitic lithology explain most uranium variability.”
+
+Objective 3:
+Model uranium mobility mechanisms
+
+Ask:
+When is uranium mobile enough to enter groundwater?
+
+Need:
+
+pH interpretation,
+carbonate chemistry assumptions,
+Ca-U geochemical relationships.
+
+Possible tools:
+
+PHREEQC modeling,
+speciation diagrams.
+
+Output:
+
+mobility interpretation model.
+Objective 4:
+Link to groundwater exposure risk
+
+Overlay:
+
+uranium risk zones,
+aquifers,
+private well density.
+
+Output:
+
+exposure vulnerability map.
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Geological arsenic hotspots in focus
 
 The mini-project assesses SGU regional geological data to identify geospatial patterns of arsenic occurence in the Swedish moraine. Mapping hotspots of arsenic levels was the focus. 
 
