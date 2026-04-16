@@ -7,15 +7,16 @@
 This mini technical project evaluates SGU regional geochemical data to identify elevated arsenic concentrations in Swedish moraine deposits, with focus on the Uppsala–Stockholm region. The purpose is to detect arsenic hotspot zones that may indicate groundwater concern areas. A geospatial screening workflow was developed using arsenic concentration data (`as_ppm`), associated geochemical variables, and GIS groundwater layers. The output consists of hotspot classification maps and groundwater relevance screening overlays designed for early-stage environmental assessment.
 
 ---
+#calculated ns: 6623528.9, and ew: 656902.4
 
 ## 1. Objective
 
 The objective of this project is to identify elevated arsenic hotspot zones in moraine geochemistry data and assess their potential spatial relevance to groundwater-sensitive areas.
 
-### Screening Question
-Where are arsenic concentrations elevated enough to warrant groundwater attention?
+### Question
+             - Where are arsenic concentrations elevated enough to warrant groundwater attention?
 
----
+![Arsenic hotspots](results/as_stockholm_Uppsala_map.png)
 
 ## 2. Data and Study Area
 
@@ -24,7 +25,7 @@ Target screening region:
 **Uppsala–Stockholm region, Central Sweden**
 
 ### Data Source
-SGU Regional Geochemistry Dataset (Morainic ICP-MS)
+SGU Regional Geochemistry Dataset (Morainic ICP-MS) extracted from **markgeokemi_regional.gpkg**
 
 ### Variables Used
 - arsenic (`as_ppm`)
@@ -34,10 +35,6 @@ SGU Regional Geochemistry Dataset (Morainic ICP-MS)
 - geometry
 - northing (`ns`)
 - easting (`ew`)
-
-SGU regional geochemistry includes arsenic as `as_ppm` in morainic ICP-MS analytical tables, making it directly suitable for hotspot screening.
-
----
 
 ## 3. Methodology
 
@@ -85,6 +82,25 @@ identify overlap zones where elevated arsenic may affect groundwater-sensitive a
 ---
 
 ## 4. Results
+
+stock and uppsla 
+
+summary:
+count    535.00
+mean       3.79
+std        4.59
+min        0.30
+25%        1.70
+50%        2.30
+75%        3.80
+max       48.40
+Name: as_ppm, dtype: float64
+ Median 2.30
+Skewness 4.66
+10.659999999999991
+Hotspot threshold (95th percentile): 10.66 ppm
+Number of hotspot samples: 27
+
 
 ### 4.1 Arsenic Hotspot Identification
 Hotspot zones represent arsenic concentrations above the 95th percentile threshold and indicate statistically elevated anomaly concentrations.
