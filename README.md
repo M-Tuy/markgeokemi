@@ -1,240 +1,352 @@
-# Geogenic uranium risk zonation in swedish moraine
-- ## ***Predicting potential groundwater xposure hotspots***
+# Geogenic Uranium Risk Zonation in Swedish Moraine  
+### IEnvironmental Geodata Intelligence Project
+
+This project builds a practical geospatial risk intelligence workflow for identifying elevated uranium zones in Swedish moraine and estimating potential groundwater exposure hotspots.
+---
+
+# Project Goal
+
+Transform SGU regional geochemical uranium data into:
+
+1. Uranium hotspot intelligence maps  
+2. Predictive uranium risk zonation maps  
+3. Geological driver analysis dashboards  
+4. Groundwater exposure screening layers  
+
+This project demonstrates technical capabilities used in:
+
+- environmental consulting
+- contaminated land assessment
+- groundwater risk screening
+- geospatial environmental intelligence
+- regulatory environmental agencies
 
 
-# Part I — Geospatial screening of uranium occurrence 
+### Geospatial Data Engineering
+- geospatial data cleaning
+- coordinate handling
+- spatial joins
+- GIS layer integration
 
+### Environmental Data Analytics
+- anomaly detection
+- hotspot thresholding
+- skewed environmental dataset interpretation
 
-## Goal
+### Predictive Modeling
+- random forest classification
+- probability mapping
+- model validation
 
-understand SGU dataset structure,
-learn geospatial geochemical workflows,
-characterize uranium distribution statistically.
+### Spatial Risk Intelligence
+- hotspot clustering
+- risk zonation
+- exposure overlay modeling
 
+### Environmental Interpretation
+- uranium mobility logic
+- groundwater relevance screening
+- geology-based risk drivers
 
-## Objectives
-Clean and organize SGU uranium dataset.
-Describe uranium concentration distribution.
-Identify statistical hotspots.
-Visualize spatial uranium occurrence patterns.
+---
 
-## Methods
-Data:
-SGU markgeokemi regional dataset
-uranium concentration (u_ppm)
-pH
-Ca
-coordinates
-Analyses:
-descriptive statistics
-skewness analysis
-percentile hotspot thresholding (95th percentile)
-hotspot mapping
-exploratory scatterplots:
-U vs pH
-U vs Ca
+# Project Architecture
 
-## Expected outputs:
-hotspot map,
-summary statistics,
-anomaly threshold map,
-first interpretation of uranium clustering.
-Value of Part I:
+---
 
+# Phase 1 — Geochemical Data Processing Pipeline
 
+### Objective:
+Build a clean, structured uranium geodata foundation.
 
-# Part II — Predicting potential groundwater exposure hotspots
+### Tasks:
+- import SGU markgeokemi dataset
+- extract uranium, pH, calcium, coordinates
+- clean missing values
+- remove duplicates
+- validate coordinate consistency
+- create hotspot labels
 
+### Tools / Skills:
+- Python
+- pandas
+- geopandas
+- numpy
 
+### Deliverables:
+- cleaned uranium geodataset
+- processed GeoDataFrame
+- hotspot-tagged dataset
 
-## OBJECTIVES
-### Objective 1:
+---
 
-Predict uranium risk zones spatially
+# Phase 2 — Uranium Hotspot Intelligence Mapping
 
-Build predictive maps for unsampled areas.
+### Objective:
+Identify statistically elevated uranium zones.
 
-Instead of point-only mapping:
-Estimate probability surfaces.
+### Tasks:
+- compute percentile thresholds
+- define 95th percentile uranium anomaly threshold
+- classify hotspot samples
+- create uranium hotspot map
+- visualize concentration gradients
 
-## Methods:
+### Tools / Skills:
+- descriptive statistics
+- percentile anomaly logic
+- matplotlib
+- geopandas plotting
 
-random forest classification,
-kriging,
-logistic regression hotspot probability model.
+### Deliverables:
+- uranium hotspot map
+- anomaly threshold report
+- hotspot candidate layer
 
-Output:
+---
 
-probability map of elevated uranium occurrence.
-Objective 2:
-Identify geological controls
+# Phase 3 — Spatial Prediction Engine
 
-Determine what explains enrichment.
+### Objective:
+Predict elevated uranium probability in unsampled areas.
 
-Predictors:
+### Tasks:
+- create hotspot classification target
+- train random forest model
+- predict hotspot probability
+- generate uranium probability surface
 
-pH,
-calcium,
-bedrock type,
-moraine parent lithology,
-geological province.
+### Input Predictors:
+- pH
+- calcium
+- Fe (if available)
+- lithology
+- coordinates
 
-Output:
+### Tools / Skills:
+- scikit-learn
+- random forest classifier
+- train/test split
+- ROC-AUC validation
 
-Example:
-“Calcium and granitic lithology explain most uranium variability.”
+### Deliverables:
+- trained prediction model
+- probability risk map
+- model performance metrics
 
-Objective 3:
-Model uranium mobility mechanisms
+---
 
-Ask:
-When is uranium mobile enough to enter groundwater?
+# Phase 4 — Geological Driver Intelligence
 
+### Objective:
+Identify what controls uranium enrichment.
+
+### Tasks:
+- rank variable importance
+- compare geological drivers
+- analyze predictor influence
+
+### Tools / Skills:
+- feature importance analysis
+- permutation importance
+- partial dependence interpretation
+
+### Deliverables:
+- driver ranking chart
+- geological influence summary
+
+---
+
+# Phase 5 — Groundwater Exposure Screening Layer
+
+### Objective:
+Estimate where uranium hazard may intersect groundwater exposure risk.
+
+### Overlay Inputs:
+- uranium probability zones
+- aquifer layers
+- private well proxy layers
+- groundwater vulnerability layers
+
+### Tasks:
+- overlay hazard + pathway + receptor layers
+- identify exposure-priority zones
+
+### Tools / Skills:
+- GIS overlay analysis
+- QGIS spatial layer integration
+- geospatial risk screening
+
+### Deliverables:
+- groundwater exposure screening map
+- priority zone identification layer
+
+---
+
+# Software Stack
+
+---
+
+## Core Programming Stack
+
+### Python Libraries:
+- pandas
+- geopandas
+- numpy
+- matplotlib
+- scikit-learn
+- shapely
+- rasterio
+
+---
+
+## GIS Platform:
+### QGIS
+
+Used for:
+- geology overlays
+- aquifer layers
+- map validation
+- final visualization exports
+
+---
+
+## Optional Advanced Spatial Tool:
+### PyKrige
+
+Use if adding:
+- kriging interpolation
+- geostatistical prediction surfaces
+
+---
+
+# Recommended Learning Stack
+
+---
+
+## 1. Machine Learning
+### HarvardX CS109x
+
+Use for:
+- decision trees
+- random forest modeling
+- boosting methods
+
+---
+
+## 2. GIS Spatial Skills
 Need:
+### QGIS practical training
 
-pH interpretation,
-carbonate chemistry assumptions,
-Ca-U geochemical relationships.
+Learn:
+- shapefile handling
+- raster overlays
+- layer joins
 
-Possible tools:
+---
 
-PHREEQC modeling,
-speciation diagrams.
+## 3. Spatial Analytics Upgrade
+Learn:
+- Moran’s I
+- hotspot clustering
+- spatial autocorrelation
 
-Output:
+---
 
-mobility interpretation model.
-Objective 4:
-Link to groundwater exposure risk
+## 4. Environmental Geochemistry Upgrade
+Need:
+- uranium mobility interpretation
+- pH-carbonate uranium chemistry basics
 
-Overlay:
+Optional:
+- PHREEQC intro
 
-uranium risk zones,
-aquifers,
-private well density.
+---
 
-Output:
+# Dataset Sources
 
-exposure vulnerability map.
+### Primary:
+SGU Markgeokemi Regional Dataset
 
+### Additional:
+- SGU geological layers
+- SGU groundwater layers
+- aquifer datasets
+- bedrock maps
 
+---
 
+# Final Output Portfolio Package
 
+At completion this project produces:
 
+### Maps:
+1. Uranium hotspot map  
+2. Uranium probability risk zonation map  
+3. Geological driver map  
+4. Groundwater exposure screening map  
 
+### Technical Outputs:
+- predictive ML model
+- reusable geospatial workflow
+- environmental risk intelligence pipeline
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-Geological arsenic hotspots in focus
+# Why This Project Matters Professionally
 
-The mini-project assesses SGU regional geological data to identify geospatial patterns of arsenic occurence in the Swedish moraine. Mapping hotspots of arsenic levels was the focus. 
+This is not a descriptive academic exercise.
 
-## Data
-## Information on how the work done
-Downloade markgeokemi data from SGU. One file "markgeokemi_regional.gpkg" is was large, so was not pushed to the Git rep.
-Created Git repository markgeokemi and cloned into my local folder.
-### markgeokemi_regional.gpkg File not tracked yet
+This project demonstrates ability to build:
+### decision-support environmental intelligence systems
 
-## Data selection
- 
-**Core dataset**: 
-- moran_0063mm_hno3_icpms HNO<sub>3</sub>-extractable as (_ppm), for environmental risk screening
-- moran_0063mm_totalhalt_xrf as the total (_ppm) as in the soil matrix
-- moran_0063mm_ph, pH data
-- fe_ppm → arsenic host mineral association
+That is directly relevant for:
+- environmental consulting companies
+- groundwater agencies
+- mining/environmental regulators
+- geospatial environmental analytics roles
 
-## location id
-unikt_id
-ns
-ew
-prov_artal
-provtyp
-geometry
+---
 
-# Results
+# Career Value
 
-## Hotspots
+This project positions your profile toward:
 
-![Arsenic hotspots](results/as_icpms_hotspots_map.png)
+### Target roles:
+- Environmental Data Analyst
+- Geospatial Environmental Consultant
+- Groundwater Risk Analyst
+- Environmental GIS Specialist
+- Contaminated Land Data Analyst
 
-The defined arsenic hotspot- the 95% percentile arsenic concentration is 13.0 ppm,
--95% of samples have arsenic ≤ 13.0 ppm
--top 5% have arsenic > 13 ppm, those top 5% are your hotspot candidates.
-Hotspot threshold (95th percentile): 13.00 ppm
-Number of hotspot samples: 1419
+---
 
+# Development Priority Order
 
-### summary stats
+Build in this sequence:
 
-summary:
-count    28077.00
-mean         3.71
-std          8.42
-min          0.10
-25%          0.80
-50%          1.60
-75%          3.80
-max        481.90
-Name: as_ppm, dtype: float64
- Median 1.60
-Skewness 23.12 
-Data are highly right-skewed as the skewness is positive. Most swedish morraine samples have low arsenic concentration. and a very small number of samples have elevated concentration.
+1. Phase 1 → data pipeline  
+2. Phase 2 → hotspot mapping  
+3. Phase 3 → prediction model  
+4. Phase 4 → driver analysis  
+5. Phase 5 → exposure screening  
 
-here mean is much higher than median, mean the median is representable.
-It is even clear from the median value of 1.6 ppm vers 481.9
+---
 
-### Arsenic distribution characteristics
-The arsenic dataset (n = 28,077) shows a highly right-skewed distribution (skewness = 23.12), indicating that most moraine samples contain low arsenic concentrations, while a limited number of locations exhibit extreme elevated values. The large difference between median (1.60 ppm) and mean (3.71 ppm) confirms the presence of high-value outliers, supporting percentile-based hotspot classification rather than mean-based thresholds.
+# Current Project Status
 
+[x] uranium data extraction started  
+[x] hotspot threshold identified  
+[x] exploratory mapping underway  
+[ ] predictive model pending  
+[ ] groundwater overlay pending  
 
+---
 
+# End Goal
 
-
-
-
-
-## Information on how the work done
-Downloade markgeokemi data from SGU. One file "markgeokemi_regional.gpkg" is was large, so was not pushed to the Git rep.
-Created Git repository markgeokemi and cloned into my local folder.
-### markgeokemi_regional.gpkg File not tracked yet
-
-## Now extracted uranium and pH data from **moran_0063mm_ph**
-
-Data cleaned. uranium, there were missing values, removed
-
-Find matching common sample points using **unikt_id**, unikt id kombinerar idnr och idkod 
-
-
-# Uranium
-
-![Geological uranium vs pH](Uranium_pH.png) 
-Elevated concrentration of uranium have been measured in the drinking water from private well.
-Main concern, radioactivity and mainly toxicity, e.g. kidney.
-In the dataset merged with pH values, the measured total uranium concentration in the geological materials ranges between **0.1** and **75.6** ppm.
-
-![Uranium total concentration as a function of pH in privated wll](Uranium_in_private_well_pH.png)
-Within the pH range 6.7-7.8, uranium occurs dominantly in the form of neutrally charged complexes.   
-Such U form is common in private drilled well. Possibily Ca<sub>2</sub>UO<sub>2</sub>(CO<sub>3</sub>)<sub>3</sub><sup>0</sup> but as the pH becomes more alkaline, this the CaUO<sub>2</sub>(CO<sub>3</sub>)<sub>3</sub><sup>2−</sup> forms.
-
-
-![Geological uranium vs Ca](Uranium_Calcium.png)
-Calcium concentration is a key factor in determining the neutral uranium  Ca<sub>2</sub>UO<sub>2</sub> complexes
-The figure below shows relationship between Ca and U on log-log-scale. The relationship is non linear.
-- at low to moderate Ca concentrations, around 10<sup>2</sup>-10<sup>4</sup>, U shows wider ranges and highest observed values.
-- At high Ca concentrations, above 10<sup>4</sup>-10<sup>5</sup>, U tends to be lower and less variable.
-This suggest that at high Ca levels leads to U immobilization or dicrease in dissolved U concetrations. Geochemically, this may indicate:
-
-high Ca favors formation of Ca-uranyl-carbonate complexes,
-or high-Ca environments correspond to lithologies/waters with lower uranium mobility or source availability. However, at low Ca ranges, other factors such as pH, organic matter are likely more important.
+Create a deployable environmental geodata intelligence workflow that converts raw SGU uranium measurements into actionable groundwater risk screening outputs.
 
 
 
 
-
- ### Arsenic concentration as a function of pH
-
- ![Geological arsenic vs pH](Uranium_pH.png)    
-
-and 
-
- ![Geological arsenic vs pH](correlation_Arsenic_vs_pH.png)   
