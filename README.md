@@ -53,7 +53,7 @@ This project demonstrates technical capabilities used in:
 
 # Project Architecture
 
----
+
 
 # Phase 1 — Geochemical Data Processing Pipeline
 
