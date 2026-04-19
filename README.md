@@ -21,11 +21,12 @@ The objective of this project is to identify elevated arsenic hotspot zones in m
 ## 2. Data and Study Area
 
 ### Study Area
-Target screening region:
+
 **Uppsala–Stockholm region, Central Sweden**
+Estimated geographic coordinates (latitude/longitude) for the Stockholm–Uppsala region and converted them to SWEREF 99 TM. Defined a bounding box (bbox) used as the sampling area.
 
 ### Data Source
-SGU Regional Geochemistry Dataset (Morainic ICP-MS) extracted from **markgeokemi_regional.gpkg**
+SGU Regional Geochemistry Dataset (ICP-MS) extracted from **markgeokemi_regional.gpkg**
 
 ### Variables Used
 - arsenic (`as_ppm`)

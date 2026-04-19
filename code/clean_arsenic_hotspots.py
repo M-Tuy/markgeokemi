@@ -16,7 +16,9 @@ markgeokemi_icpms_clean = markgeokemi_icpms.dropna(
 # save cleaned data to GeoPackage
 markgeokemi_icpms_clean.to_file(
      "C:/Projects/markgeokemi/cleaned_data/markgeokemi_icpms_clean.gpkg",
-    driver= "GPKG")
+    driver= "GPKG",
+    use_arrow = True
+)
 
 #geographic bbox in WGS84; convert to SWEREF 99 TM
 min_lat, max_lat = 59.20, 59.95
