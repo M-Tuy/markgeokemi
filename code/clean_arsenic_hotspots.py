@@ -1,50 +1,80 @@
 import geopandas as gpd
+from pyproj import Transformer
+import matplotlib.pyplot as plt
 
-# Read raw data (_icpms) and save cleaned data
-gpd.options.io_engine = "pyogrio" #by default pyogrio will be applied to read_file
+gpd.options.io_engine = "pyogrio" #faster engine
 markgeokemi_icpms = gpd.read_file(
     "C:/Projects/markgeokemi/raw_data/markgeokemi_regional.gpkg",
     layer = "moran_0063mm_hno3_icpms",
     use_arrow = True
-).dropna(subset=["unikt_id", "ns", "ew", "geometry"]
-).set_crs("EPSG:3006", allow_override=True) #remove NaN
-markgeokemi_icpms.head()
-markgeokemi_icpms.to_file(
+)
+#Drop rows with missing ID/coordinates, ensure SWEREF system 
+markgeokemi_icpms_clean = markgeokemi_icpms.dropna(   
+    subset=[
+        "unikt_id", "ns", "ew", "geometry"
+    ]).set_crs("EPSG:3006", allow_override=True) 
+# save cleaned data to GeoPackage
+markgeokemi_icpms_clean.to_file(
      "C:/Projects/markgeokemi/cleaned_data/markgeokemi_icpms_clean.gpkg",
-    driver= "GPKG",
-    use_arrow = True) #save in cleaned raw_data
-#as_icpms = markgeokemi_icpms_clean["as_ppm"]
-as_icpms = markgeokemi_icpms_clean[
-    markgeokemi_icpms_clean["as_ppm"] > 0
-][["unikt_id", "ns", "ew", "as_ppm", "geometry"]] #filter rows based on a condition that values in column as_ppm >0
+    driver= "GPKG")
 
-#summary stats
+#geographic bbox in WGS84; convert to SWEREF 99 TM
+min_lat, max_lat = 59.20, 59.95
+min_lon, max_lon = 17.30, 18.30
+trans = Transformer.from_crs(
+    "EPSG:4326",
+    "EPSG:3006",
+    always_xy = True
+)
+# convert bbox corners
+min_ew, min_ns = trans.transform(min_lon, min_lat)  
+max_ew, max_ns = trans.transform(max_lon, max_lat)
 
-as_icpms_stat = as_icpms["as_ppm"].describe()
-median_as_icpms = as_icpms["as_ppm"].median()
-skew_as_icpms = as_icpms["as_ppm"].skew()
+# keep valid (measured, >0) arsenic values within defined bbox
+#0 → removes 0 (not analyzed
+as_stoch_upp = markgeokemi_icpms_clean[
+    (markgeokemi_icpms_clean["as_ppm"].notna()) & #removes missing values
+    (markgeokemi_icpms_clean["as_ppm"] > 0) & # > 0 removes not analysed & below detection
+    (markgeokemi_icpms_clean["ew"].between(min_ew, max_ew)) &
+    (markgeokemi_icpms_clean["ns"].between(min_ns, max_ns))
+][["unikt_id", "ns", "ew", "as_ppm", "geometry"]
+].copy()
 
-print(f" summary:")
-print(as_icpms_stat.round(2))
-print(f" Median {median_as_icpms:.2f}")
-print(f"Skewness {skew_as_icpms:.2f}")
+#summary stats for defined bbox
+as_stoch_upp_stat = as_stoch_upp["as_ppm"].describe()
+median_as_stoch_upp = as_stoch_upp["as_ppm"].median()
+skew_as_stoch_upp = as_stoch_upp["as_ppm"].skew()
 
-#print(as_icpms.describe())
-thresh_95 = as_icpms["as_ppm"].quantile(0.95)
-print(thresh_95)
-as_icpms_hotspots = as_icpms[
-    as_icpms["as_ppm"] >= thresh_95
-]
-
+# define 95th percentile threshold; select top 5% (hotspots)
+thresh_95 = as_stoch_upp["as_ppm"].quantile(0.95)
+as_stoch_upp_hotspots = as_stoch_upp[
+    as_stoch_upp["as_ppm"] >= thresh_95
+].copy()
+#report summary stats and hotspot metrics
+print(f" report summary stats and hotspot metrics:")
+print(as_stoch_upp_stat.round(2))
+print(f" median {median_as_stoch_upp:.2f}")
+print(f"skewness {skew_as_stoch_upp:.2f}")
 print(f"Hotspot threshold (95th percentile): {thresh_95:.2f} ppm")
-print(f"Number of hotspot samples: {len(as_icpms_hotspots)}")
+print(f"Number of hotspot samples: {len(as_stoch_upp_hotspots)}")
 
-import matplotlib.pyplot as plt
-as_icpms_hotspots.plot(column="as_ppm", legend=True)
+fig, ax = plt.subplots(figsize=(7, 7))
+as_stoch_upp.plot(
+    ax=ax,
+    color="lightgrey",
+    markersize=10,
+    alpha=0.7
+)
+as_stoch_upp_hotspots.plot(
+    column="as_ppm",
+    legend=True,
+    ax=ax,
+    markersize=45
+)
+ax.set_title("Arsenic Hotspots, Stockholm–Uppsala Region")
 plt.savefig(
-    "C:/Projects/markgeokemi/results/as_icpms_hotspots_map.png",
+    "C:/Projects/markgeokemi/results/as_stockholm_Uppsala_map.png",
     dpi=300,
     bbox_inches="tight"
 )
 plt.show()
-

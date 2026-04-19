@@ -83,24 +83,22 @@ identify overlap zones where elevated arsenic may affect groundwater-sensitive a
 
 ## 4. Results
 
-stock and uppsla 
+**Defined geographic area: Stockholm and Uppsala**
 
-summary:
-count    535.00
-mean       3.79
-std        4.59
-min        0.30
-25%        1.70
-50%        2.30
-75%        3.80
-max       48.40
-Name: as_ppm, dtype: float64
- Median 2.30
-Skewness 4.66
-10.659999999999991
-Hotspot threshold (95th percentile): 10.66 ppm
+report summary stats and hotspot metrics:
+count: 535.00
+mean: 3.79 
+std: 4.59
+min: 0.30
+25%: 1.70
+50%: 2.30
+75%: 3.80
+max: 48.40
+**unit: as_ppm, dtype: float64**
+median 2.30
+skewness 4.66
+The threshold, hotspot (95th percentile): 10.66 ppm
 Number of hotspot samples: 27
-
 
 ### 4.1 Arsenic Hotspot Identification
 Hotspot zones represent arsenic concentrations above the 95th percentile threshold and indicate statistically elevated anomaly concentrations.
@@ -194,4 +192,3 @@ Optional:
 
 ## 10. Conclusion
 
-This project demonstrates a compact environmental geodata workflow for identifying arsenic hotspots and screening their groundwater relevance in Swedish moraine systems. The approach provides a practical decision-support screening tool applicable to environmental consulting, groundwater agencies, and regional risk assessment contexts.
