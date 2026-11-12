@@ -5,7 +5,52 @@
 ---
 
 ## 1. Introduction
-The chemitry of surface and groundwater results from interactions between many factors, including atmospheric input, climate and topography, and the local mineral composition and geochemical properties within the cathment.
+
+## 1. Introduction
+
+The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, and the local mineral composition and geochemical properties of the catchment. The process starts with the weathering of primary minerals when, over time, rocks and minerals at the Earth's surface react with the atmosphere, water and living organisms. In most natural systems, the main source of protons (H+) is carbonic acid (H2CO3). It forms when soil CO2 dissolves in water. Soil CO2 is produced by the decomposition of organic matter and root respiration, and in soil, the partial pressure  is often 10 to 100 times higher than in the atmosphere. Protons attack mineral surfaces and release ions into solution. Secondary minerals, such as clays, then form by precipitation. Ion exchange, adsorption and desorption also control the dissolved ion content. examples of albite
+
+**Albite weathers to kaolinite:**
+
+$2\,\mathrm{NaAlSi_3O_8} + 2\,\mathrm{CO_2} + 11\,\mathrm{H_2O} \rightarrow \mathrm{Al_2Si_2O_5(OH)_4} + 2\,\mathrm{Na^+} + 2\,\mathrm{HCO_3^-} + 4\,\mathrm{H_4SiO_4}$
+
+**Calcite dissolves.** First, CO2 forms carbonic acid:
+
+$\mathrm{CO_2} + \mathrm{H_2O} \rightleftharpoons \mathrm{H_2CO_3}$
+
+Then carbonic acid dissolves calcite:
+
+$\mathrm{CaCO_3} + \mathrm{H_2CO_3} \rightarrow \mathrm{Ca^{2+}} + 2\,\mathrm{HCO_3^-}$
+
+Overall:
+
+$\mathrm{CaCO_3} + \mathrm{CO_2} + \mathrm{H_2O} \rightarrow \mathrm{Ca^{2+}} + 2\,\mathrm{HCO_3^-}$
+
+
+
+
+Other sources of H+ are organic acids and ligands, which bind to mineral surfaces and speed up dissolution. In some environments, sulfuric acid forms through the oxidation of sulfide minerals such as pyrite.
+
+
+
+
+The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, and the local mineral composition and geochemical properties of the catchment.
+
+The process starts with the weathering of primary minerals when rocks and minerals at the Earth's surface react with the atmosphere, water and living organisms. In most natural systems, the main source of protons (H+) is carbonic acid (H2CO3), which is reaction soil CO2 dissolution in water, the former via  the decomposition of organic matter and root respiration. Its partial pressure in soils is often 10 to 100 times higher than in the atmosphere.Protons attack mineral surfaces and release ions into solution. Secondary minerals, such as clays, then form by precipitation. Ion exchange, adsorption and desorption also control the dissolved ion content.
+
+Other sources of H+ are organic acids and ligands, which bind to mineral surfaces and speed up dissolution. In some environments, sulfuric acid forms through the oxidation of sulfide minerals such as pyrite.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 -Hydrochemical processes involving precipitation and dissolution, ionic exchange, adsorption and desorption over time control the resulting changes in subsurface and surface flows. Therefore, spatial and temporal changes in water composition are attributed to these factors. Differences among waters in a watershed show the various steps of water–rock interaction (Federico et al. Citation2008).
