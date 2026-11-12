@@ -119,5 +119,5 @@ Table: model 2
 
 ## 8. References
 
-- Stumm, W. and Morgan, J.J. (1981). (Sweden)Aquatic Chemistry: An Introduction Emphasizing 
+1. Stumm, W. and Morgan, J.J. (1981). (Sweden)Aquatic Chemistry: An Introduction Emphasizing 
 Chemical Equilibria in Natural Waters.  2nd Edition, John Wiley & Sons Ltd., New York.
