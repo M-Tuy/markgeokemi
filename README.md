@@ -33,16 +33,6 @@ nverse modelling attempts to account for the chemical changes that occur as wate
 
 - Product: [markgeokemi-regional](https://www.sgu.se/produkter-och-tjanster/geologiska-data/geokemi--geologiska-data/markgeokemi/)
 
-**Cleaning steps:**
-
-**Output** 
-
-| Element | P75 | P95 |
-|---|---:|---:|
-| As | 3.90 | 13.00 |
-| U | 2.40 | 4.60 |
-
-**Table 1.** 
 
 ## 3. Results
 
@@ -66,23 +56,31 @@ As hotspots (top 5%, red) among all cleaned sample points (Fig. 1).
 
 
 
-| Class | Count | % of total |
+| Minerals | moles |  Minimum  |
 |---|---:|---:|
-| As hotspot (top 5%) | 1 394 | 4.98% |
-| U hotspot (top 5%) | 1 370 | 4.90% |
-| Priority 1 (both hotspots) | 137 | 0.49% |
-| Priority 2 (either hotspots) | 2 490 | 8.90% |
-| Background | 25 354 | 90.61% |
+| Halite | 1.600e-05 |  1.490e-05 |
+| Gypsum | 1.500e-05 |  1.413e-05 |
+| Kaolinite |-3.392e-05 | -5.587e-05 |
+| Ca-Montmorillon  |-8.090e-05 | -1.100e-04 |
+| CO2(g) | 3.009e-04 | 2.365e-04 |
+|Calcite|1.161e-04|1.007e-04|
+|Biotite| 1.370e-05|1.317e-05|
+|Plagioclase |  1.758e-04 | 1.582e-04|
 
-**Table 2**: Point counts per class (relative percentile screening, n=27 981)
 
-| Class | Count | % of total |
-|---|---:|---:|
-| Below KM (<10 ppm) | 25 862 | 92.42% |
-| KM-MKM (10-25 ppm) | 1 752 | 6.26% |
-| Above MKM (>25 ppm) | 367 | 1.31% |
+Phase mole transfers:                 Minimum        Maximum   Formula             (Approximate SI in solution 1, 2 at 298 K,   1 atm)
+         Halite      1.600e-05      1.490e-05      1.710e-05   NaCl                       (-10.32, -9.72)
+         Gypsum      1.500e-05      1.413e-05      1.588e-05   CaSO4:2H2O                 ( -4.62, -3.77)
+      Kaolinite     -3.392e-05     -5.587e-05     -1.224e-05   Al2Si2O5(OH)4              (      ,      )
+Ca-Montmorillon     -8.090e-05     -1.100e-04     -5.154e-05   Ca0.165Al2.33Si3.67O10(OH  (      ,      )
+         CO2(g)      3.009e-04      2.365e-04      3.659e-04   CO2                        ( -1.87, -2.05)
+        Calcite      1.161e-04      1.007e-04      1.309e-04   CaCO3                      ( -3.30, -1.77)
+        Biotite      1.370e-05      1.317e-05      1.370e-05   KMg3AlSi3O10(OH)2          (      ,      )
+    Plagioclase      1.758e-04      1.582e-04      1.935e-04   Na0.62Ca0.38Al1.38Si2.62O  (      ,      )
 
-**Table 3**: Point counts per class (As vs. Naturvårdsverket guideline values, n=27 981)
+
+
+
 
 ## 4. Discussion
 
@@ -91,5 +89,3 @@ As hotspots (top 5%, red) among all cleaned sample points (Fig. 1).
 ## 8. References
 
 - Lecomte, A., Cathelineau, M., Michels, R., Peiffert, C., Brouand, M. (2017). *Uranium mineralization in the Alum Shale Formation (Sweden).* **Ore Geology Reviews, 88**, 71–98.
-- Naturvårdsverket. *Riktvärden för förorenad mark.*
-- SGU. *Markgeokemi, regional provtagning.*
