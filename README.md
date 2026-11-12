@@ -75,7 +75,7 @@ Table: model 2
 
 | Minerals | Moles | Minimum | Maximum | Formula | SI in sol 1, 2 |
 |---|---:|---:|---:|---|---|
-| Halite | 1.600e-05 | 1.490e-05 | 1.710e-05 | NaCl | (-10.32, -9.72) |
+| Halite | 1.600e-05 | 1.490e-05 | 1.710e-05 | NaCl | (-10.32,&nbsp; -9.72) |
 | Gypsum | 1.500e-05 | 1.413e-05 | 1.588e-05 | CaSO4:2H2O | (-4.62, -3.77)  |
 | Kaolinite | -3.392e-05 | -5.587e-05 | -1.224e-05 | Al2Si2O5(OH)4 | - |
 | Ca-Montmorillon | -8.090e-05 | -1.100e-04 | -5.154e-05 | Ca0.165Al2.33Si3.67O10(OH)2 | - |
