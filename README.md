@@ -62,8 +62,8 @@ As hotspots (top 5%, red) among all cleaned sample points (Fig. 1).
 | Gypsum | 1.500e-05 |  1.413e-05 |1.588e-05|CaSO4:2H2O|-4.62, -3.77|
 | Kaolinite |-3.392e-05 | -5.587e-05 |-1.224e-05|Al2Si2O5(OH)4|-|
 | Ca-Montmorillon  |-8.090e-05 | -1.100e-04 |-5.154e-05|Ca0.165Al2.33Si3.67O10(OH|-|
-| CO2(g) | 3.009e-04 | 2.365e-04 | 3.659e-04|CO2 |-1.87, -2.05|
-|Calcite|1.161e-04|1.007e-04|1.309e-04| 1.309e-04|CaCO3|-3.30, -1.77|
+| CO2(g) | 3.009e-04 | 2.365e-04 | 3.659e-04|CO2 |(-1.87, -2.05)|
+|Calcite|1.161e-04|1.007e-04|1.309e-04| CaCO3|(-3.30, -1.77)|
 |Biotite| 1.370e-05|1.317e-05|1.370e-05|KMg3AlSi3O10(OH)2|-|
 |Plagioclase |  1.758e-04 | 1.582e-04|1.935e-04|Na0.62Ca0.38Al1.38Si2.62O|-|
 
