@@ -8,31 +8,20 @@
 
 ## 1. Introduction
 
-The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, and the local mineral composition and geochemical properties of the catchment. The process starts with the weathering of primary minerals when, over time, rocks and minerals at the Earth's surface react with the atmosphere, water and living organisms. In most natural systems, the main source of protons (H+) is carbonic acid (H2CO3). It forms when soil CO2 dissolves in water. Soil CO2 is produced by the decomposition of organic matter and root respiration, and in soil, the partial pressure  is often 10 to 100 times higher than in the atmosphere. Protons attack mineral surfaces and release ions into solution. Secondary minerals, such as clays, then form by precipitation. Ion exchange, adsorption and desorption also control the dissolved ion content. examples of albite
+The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, and the local mineral composition and geochemical properties of the catchment. The process starts with the weathering of primary minerals when, over time, rocks and minerals at the Earth's surface react with the atmosphere, water and living organisms. In most natural systems, the main source of protons (H+) is carbonic acid ($H_2CO_3$). It forms when soil $CO_2$ dissolves in water. Soil $CO_2$ is produced by the decomposition of organic matter and root respiration, and in soil, the partial pressure  is often 10 to 100 times higher than in the atmosphere. Protons attack mineral surfaces and release ions into solution. Secondary minerals, such as clays, then form by precipitation. Ion exchange, adsorption and desorption also control the dissolved ion content. examples of albite
 
-**Albite weathers to kaolinite:**
-
+Albite weathers to kaolinite:
 $$2NaAlSi_3O_8 + 2CO_2 + 11H_2O (H_2CO_3) \rightarrow Al_2Si_2O_5(OH)_4 + 2Na^+ + 2HCO_3 + 4H_4SiO_4$$ 
 
-**Calcite dissolves.**
-
+Calcite dissolves:
 $$CO_2 + H_2O \rightleftharpoons H_2CO_3$$ CO_2 forms carbonic acid:
-
 $$CaCO_3 + H_2CO_3 \rightarrow Ca^{2+} + 2HCO_3$$ carbonic acid dissolves calcite
 
-
-
-
 Other sources of H+ are organic acids and ligands, which bind to mineral surfaces and speed up dissolution. In some environments, sulfuric acid forms through the oxidation of sulfide minerals such as pyrite.
 
 
 
 
-The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, and the local mineral composition and geochemical properties of the catchment.
-
-The process starts with the weathering of primary minerals when rocks and minerals at the Earth's surface react with the atmosphere, water and living organisms. In most natural systems, the main source of protons (H+) is carbonic acid (H2CO3), which is reaction soil CO2 dissolution in water, the former via  the decomposition of organic matter and root respiration. Its partial pressure in soils is often 10 to 100 times higher than in the atmosphere.Protons attack mineral surfaces and release ions into solution. Secondary minerals, such as clays, then form by precipitation. Ion exchange, adsorption and desorption also control the dissolved ion content.
-
-Other sources of H+ are organic acids and ligands, which bind to mineral surfaces and speed up dissolution. In some environments, sulfuric acid forms through the oxidation of sulfide minerals such as pyrite.
 
 
 
