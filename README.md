@@ -3,48 +3,41 @@
 **Author:** Marius Tuyishime. **Course: Geochemicalmodelling2026, exercise 5** 
 
 ---
+Inverse modelling of mineral reactions in groundwater using PHREEQC
 
-## 1. Introduction
+Author: Marius Tuyishime. Course: Geochemical modelling 2026, Exercise 5
 
-## 1. Introduction
+1. Introduction
+1.1 Background
 
-The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, and the local mineral composition and geochemical properties of the catchment. The process starts with the weathering of primary minerals when, over time, rocks and minerals at the Earth's surface react with the atmosphere, water and living organisms. In most natural systems, the main source of protons (H+) is carbonic acid ($H_2CO_3$). It forms when soil $CO_2$ dissolves in water. Soil $CO_2$ is produced by the decomposition of organic matter and root respiration, and in soil, the partial pressure  is often 10 to 100 times higher than in the atmosphere. Protons attack mineral surfaces and release ions into solution. Secondary minerals, such as clays, then form by precipitation. Ion exchange, adsorption and desorption also control the dissolved ion content. examples of albite
+The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, the mineral composition of the catchment, water temperature, flow rate, the presence of a gas phase, and redox conditions. The process starts with the weathering of primary minerals. Over time, rocks and minerals at the Earth’s surface react with the atmosphere, water and living organisms.
 
-Albite weathers to kaolinite:<br>
-$2NaAlSi_3O_8 + 2CO_2 + 11H_2O (H_2CO_3) \rightarrow Al_2Si_2O_5(OH)_4 + 2Na^+ + 2HCO_3 + 4H_4SiO_4$ 
+In most natural systems, the main source of protons (H⁺) is carbonic acid (H₂CO₃). It forms when soil CO₂ dissolves in water. Soil CO₂ is produced by the decomposition of organic matter and by root respiration. Its partial pressure in soil is higher than in the atmosphere. Protons attack mineral surfaces and release ions into solution. Secondary minerals, such as clays, then form by precipitation. Ion exchange, adsorption and desorption also control the dissolved ion content. Two examples are:
 
-Calcite dissolves:<br>
-$CO_2 + H_2O \rightleftharpoons H_2CO_3$ CO_2 forms carbonic acid:<br>
-$CaCO_3 + H_2CO_3 \rightarrow Ca^{2+} + 2HCO_3$ carbonic acid dissolves calcite
+Albite weathers to kaolinite:
+$2NaAlSi_3O_8 + 2CO_2 + 11H_2O \rightarrow Al_2Si_2O_5(OH)_4 + 2Na^+ + 2HCO_3^- + 4H_4SiO_4$
 
-Other sources of H+ are organic acids and ligands, which bind to mineral surfaces and speed up dissolution. In some environments, sulfuric acid forms through the oxidation of sulfide minerals such as pyrite.
+Calcite dissolves in carbonic acid:
+$CO_2 + H_2O \rightleftharpoons H_2CO_3$
+$CaCO_3 + H_2CO_3 \rightarrow Ca^{2+} + 2HCO_3^-$
 
+Organic acids and ligands are other proton sources. They bind to mineral surfaces and speed up dissolution. Sulfuric acid forms where sulfide minerals, such as pyrite, oxidise.
 
+1.2 Geochemical modelling
 
+Differences in water chemistry result from water reacting with the surrounding rock. Other processes also act, such as plant uptake of carbon, gas exchange, and input of nutrients and metals. Geochemical modelling describes these interactions at the water-rock interface.
 
+Inverse modelling explains the water chemistry by mineral reactions and gas exchange. It determines the mole transfers of phases that account for the change between an initial and a final water. It can show which primary minerals dissolve and which secondary minerals form. It can also show how much of a change comes from mixing and how much from reactions. It uses mass balance only, so it gives no reaction rates.
 
+This exercise repeats the study of Garrels and Mackenzie (1967) on two groundwater springs in the Sierra Nevada. The ephemeral spring (solution 1) feeds the perennial spring (solution 2), which has reacted longer with the granitic bedrock. The aim is to find, with PHREEQC, the mineral and gas mole transfers that turn solution 1 into solution 2, and to judge which model is most reasonable.
 
+Reference
 
-
-
-
-
-
-
-
-
-
+Garrels, R.M. and Mackenzie, F.T. (1967). Origin of the chemical compositions of some springs and lakes. In: Equilibrium Concepts in Natural Water Systems, Advances in Chemistry 67, 222-242. American Chemical Society. https://doi.org/10.1021/ba-1967-0067.ch010
 
 
--Hydrochemical processes involving precipitation and dissolution, ionic exchange, adsorption and desorption over time control the resulting changes in subsurface and surface flows. Therefore, spatial and temporal changes in water composition are attributed to these factors. Differences among waters in a watershed show the various steps of water–rock interaction (Federico et al. Citation2008).
 
--Rock weathering generally is influenced not only by the host rock but also by a series of constraining mechanisms, such as the extent of leaching of the host rock and the formation of secondary minerals, which in turn depend on water temperature and flow rate, on the presence of a gas phase, and on redox conditions. Geochemical modelling is used for the description of interactions in water–rock interface systems (Plummber Citation1992)
 
--For predicting water composition and modelling of weathering reactions, forward and inverse modelling is used (Plummer Citation1992).
-
-nverse modelling attempts to account for the chemical changes that occur as water evolves along a flow path (Plummer et al. Citation1994). Inverse mass balance modelling attempts to determine sets of mole transfers of phases that account for changes in water chemistry between one or a mixture of initial water compositions and final water compositions (Parkhurst and Appelo Citation1999). Inverse modelling has been applied to determine reactions that lead to conversion of primary minerals to secondary minerals. Plummer et al. (Citation1990) investigated dolomite dissolution in Madison, USA, by inverse modelling. They showed that anhydrite dissolution caused calcite precipitation and dolomite dissolution. Perry (Citation2001) described the reactions between water and rock by inverse modelling in a waterlogged coal mine in Appalachia, USA.
-
--water as attaque of CO2 soil water on egnious rocks and as a results
 
 ## 2. Data and Method
 
