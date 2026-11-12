@@ -34,13 +34,13 @@ This exercise repeats the study of Garrels and Mackenzie (1967) on two groundwat
 |---:|---:|---:|
 |pH|6.2|6.8|
 |$SiO_2$|0.273|0.410|
-|$Ca^2$|0.078|0.260|
+|$Ca^2^+$|0.078|0.260|
 |$Mg^2$|0.029|0.071|
 |$Na^1$|0.134|0.259|
 |$K^1$|0.028|0.040|
 |$HCO_3^1$|0.328|0.895|
-|$SO_4^2-$|0.010|0.025|
-|Cl^-|0.014|0.030|
+|$SO_4^2^-$|0.010|0.025|
+|$Cl^-$|0.014|0.030|
 
 Data source: Garrels and Mackenzie (1967). concentration are expressed in mM.
 
