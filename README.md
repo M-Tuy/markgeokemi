@@ -1,6 +1,6 @@
-# Inverse modelling
+# Inverse modelling of mineral reactions in groundwater- the Sierra springs
 
-**Author:** Marius Tuyishime. **Course: Geochemicalmodelling2026** . **Submitted** 2026-11-12.
+**Author:** Marius Tuyishime. **Course: Geochemicalmodelling2026, exercise 5** 
 
 ---
 
@@ -67,15 +67,12 @@ Table model 1:
 | Biotite | 1.370e-05 | 1.317e-05 | 1.370e-05 | KMg3AlSi3O10(OH)2 | - |
 | Plagioclase | 1.758e-04 | 1.582e-04 | 1.935e-04 | Na0.62Ca0.38Al1.38Si2.62O8 | - |
 
-git add .
-git commit -m "GeoMod"
-git push
 
 Table: model 2
 
 | Minerals | Moles | Minimum | Maximum | Formula | SI in sol 1, 2 |
 |---|---:|---:|---:|---|---|
-| Halite | 1.600e-05 | 1.490e-05 | 1.710e-05 | NaCl | (-10.32,&nbsp; -9.72) |
+| Halite | 1.600e-05 | 1.490e-05 | 1.710e-05 | NaCl | (-10.32, -9.72) |
 | Gypsum | 1.500e-05 | 1.413e-05 | 1.588e-05 | CaSO4:2H2O | (-4.62, -3.77)  |
 | Kaolinite | -3.392e-05 | -5.587e-05 | -1.224e-05 | Al2Si2O5(OH)4 | - |
 | Ca-Montmorillon | -8.090e-05 | -1.100e-04 | -5.154e-05 | Ca0.165Al2.33Si3.67O10(OH)2 | - |
