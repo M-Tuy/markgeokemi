@@ -1,5 +1,4 @@
 # Inverse modelling of mineral reactions in groundwater using PHRERQC
-## the Sierra springs
 
 **Author:** Marius Tuyishime. **Course: Geochemicalmodelling2026, exercise 5** 
 
