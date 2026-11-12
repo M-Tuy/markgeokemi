@@ -38,9 +38,9 @@ This exercise repeats the study of Garrels and Mackenzie (1967) on two groundwat
 |$Mg^2$|0.029|0.071|
 |$Na^1$|0.134|0.259|
 |$K^1$|0.028|0.040|
-|$HCO_3^1$|0.328|0.89|
-|$SO4_4^2-$|||
-|Cl^-|||
+|$HCO_3^1$|0.328|0.895|
+|$SO_4^2-$|0.010|0.025|
+|Cl^-|0.014|0.030|
 
 Data source: Garrels and Mackenzie (1967). concentration are expressed in mM.
 
