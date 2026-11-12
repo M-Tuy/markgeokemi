@@ -1,193 +1,95 @@
-# Geological arsenic occurence in Swedish mmoraine deposits   
-### Spatial screening of arsenic hotspots 
+# Inverse modelling
 
----
-## Executive Summary
-
-This mini technical project evaluates SGU regional geochemical data to identify elevated arsenic concentrations in Swedish moraine deposits, with focus on the Uppsala–Stockholm region. The purpose is to detect arsenic hotspot zones that may indicate groundwater concern areas. A geospatial screening workflow was developed using arsenic concentration data (`as_ppm`), associated geochemical variables, and GIS groundwater layers. The output consists of hotspot classification maps and groundwater relevance screening overlays designed for early-stage environmental assessment.
-
----
-#calculated ns: 6623528.9, and ew: 656902.4
-
-## 1. Objective
-
-The objective of this project is to identify elevated arsenic hotspot zones in moraine geochemistry data and assess their potential spatial relevance to groundwater-sensitive areas.
-
-### Question
-             - Where are arsenic concentrations elevated enough to warrant groundwater attention?
-
-![Arsenic hotspots](results/as_stockholm_Uppsala_map.png)
-
-## 2. Data and Study Area
-
-### Study Area
-Estimated geographic coordinates (latitude/longitude) for the Stockholm–Uppsala region and converted them to SWEREF 99 TM. Defined a bounding box (bbox) used as the sampling area.
-
-### Data Source
-SGU Regional Geochemistry Dataset (ICP-MS) extracted from **markgeokemi_regional.gpkg**
-
-### Variables Used
-- arsenic (`as_ppm`)
-- pH
-- Fe
-- calcium
-- geometry
-- northing (`ns`)
-- easting (`ew`)
-
-## 3. Methodology
-
-### 3.1 Dataset Construction
-- Imported SGU geochemical dataset
-- Extracted arsenic-related variables
-- Subsetted target geographic region
-
-### 3.2 Data Cleaning
-Removed:
-- missing arsenic values
-- duplicate records
-- invalid coordinates
-
-Validated:
-- arsenic units consistency (ppm)
-
-Converted cleaned dataset into GeoDataFrame.
-
-### 3.3 Hotspot Classification
-Arsenic concentrations classified into screening categories:
-
-| Class     | As ppm |
-|-----------|--------|
-| Low       | ≤ Q1 |
-| Typical   | Q1 – Median |
-| Elevated  | Median – 95th percentile |
-| Hotspot   | > 95th percentile |
-
-Percentile thresholds were calculated directly from dataset distribution.
-
-### 3.4 Spatial Mapping
-Generated hotspot concentration map showing:
-- all arsenic sample points
-- hotspot anomalies highlighted
-
-### 3.5 Groundwater Overlay
-Overlay analysis performed using:
-- aquifer polygons / groundwater bodies
-- arsenic hotspot layer
-
-Purpose:
-identify overlap zones where elevated arsenic may affect groundwater-sensitive areas.
+**Author:** Marius Tuyishime. **Course: Geochemicalmodelling2026** . **Submitted** 2026-11-12.
 
 ---
 
-## 4. Results
+## 1. Introduction
 
-**Defined geographic area: Stockholm and Uppsala**
+-Autoregressive analyse
 
-report summary stats and hotspot metrics:
-count: 535.00
-mean: 3.79 
-std: 4.59
-min: 0.30
-25%: 1.70
-50%: 2.30
-75%: 3.80
-max: 48.40
-**unit: as_ppm, dtype: float64**
-median 2.30
-skewness 4.66
-The threshold, hotspot (95th percentile): 10.66 ppm
-Number of hotspot samples: 27
+-Role of surface water
+-The chemical composition of surface water is controlled by many factors, including composition of precipitation, mineralogy of the watershed, climate and topography, and input of chemicals derived from human activities
 
-### 4.1 Arsenic Hotspot Identification
-Hotspot zones represent arsenic concentrations above the 95th percentile threshold and indicate statistically elevated anomaly concentrations.
+-Hydrochemical processes involving precipitation and dissolution, ionic exchange, adsorption and desorption over time control the resulting changes in subsurface and surface flows. Therefore, spatial and temporal changes in water composition are attributed to these factors. Differences among waters in a watershed show the various steps of water–rock interaction (Federico et al. Citation2008).
 
-### 4.2 Spatial Pattern Observations
-Analysis identifies:
-- clustered arsenic anomaly zones
-- localized concentration hotspots rather than uniform distribution
+-Rock weathering generally is influenced not only by the host rock but also by a series of constraining mechanisms, such as the extent of leaching of the host rock and the formation of secondary minerals, which in turn depend on water temperature and flow rate, on the presence of a gas phase, and on redox conditions. Geochemical modelling is used for the description of interactions in water–rock interface systems (Plummber Citation1992)
 
-### 4.3 Groundwater Relevance
-Overlay mapping highlights:
-- hotspot-groundwater intersection areas
-- proximity concern zones requiring further screening
+-For predicting water composition and modelling of weathering reactions, forward and inverse modelling is used (Plummer Citation1992).
 
----
+nverse modelling attempts to account for the chemical changes that occur as water evolves along a flow path (Plummer et al. Citation1994). Inverse mass balance modelling attempts to determine sets of mole transfers of phases that account for changes in water chemistry between one or a mixture of initial water compositions and final water compositions (Parkhurst and Appelo Citation1999). Inverse modelling has been applied to determine reactions that lead to conversion of primary minerals to secondary minerals. Plummer et al. (Citation1990) investigated dolomite dissolution in Madison, USA, by inverse modelling. They showed that anhydrite dissolution caused calcite precipitation and dolomite dissolution. Perry (Citation2001) described the reactions between water and rock by inverse modelling in a waterlogged coal mine in Appalachia, USA.
 
-## 5. Maps Produced
+-water as attaque of CO2 soil water on egnious rocks and as a results
 
-### Map 1 — Arsenic Concentration Hotspot Map
-Displays arsenic anomaly concentrations across the study region.
+## 2. Data and Method
 
-### Map 2 — Hotspot Classification Map
-Shows categorized arsenic screening classes.
+**Data source:**
 
-### Map 3 — Groundwater Relevance Screening Map
-Displays overlap between arsenic hotspots and groundwater-sensitive areas.
+**Site description and  and Hydrogeological description**
+***Geology and Water-bearing formations and aquifer types***
+- The methods used in this study include, a light litterature review data analysis using various software packages
 
----
+**Geochemical modelling**
 
-## 6. Interpretation
+- Product: [markgeokemi-regional](https://www.sgu.se/produkter-och-tjanster/geologiska-data/geokemi--geologiska-data/markgeokemi/)
 
-### Spatial Interpretation
-Clustered hotspot patterns suggest localized geological controls rather than diffuse regional enrichment.
+**Cleaning steps:**
 
-### Geological Interpretation
-Possible controls include:
-- lithological source influence
-- redox-sensitive mobilization conditions
-- Fe-associated arsenic release pathways
+**Output** 
 
-### Groundwater Implication
-Hotspot overlap with aquifer zones indicates priority areas for groundwater verification and targeted sampling.
+| Element | P75 | P95 |
+|---|---:|---:|
+| As | 3.90 | 13.00 |
+| U | 2.40 | 4.60 |
 
----
+**Table 1.** 
 
-## 7. Python Workflow Structure
+## 3. Results
 
-### Script 1 — `01_build_arsenic_dataset.py`
-Tasks:
-- import SGU data
-- clean records
-- create GeoDataFrame
+Results and discussion
 
-### Script 2 — `02_classify_hotspots.py`
-Tasks:
-- compute percentiles
-- assign hotspot classes
+models differences
+3.1 Physical and chemical characteristics of surface water
 
-### Script 3 — `03_hotspot_groundwater_map.py`
-Tasks:
-- create hotspot map
-- groundwater overlay map
+- temp, pH, el conductivity
+- Processes controlling major solute distributions in surface water
+- Saturation index (SI) is a factor that indicates mineral saturation due to water chemistry.
+- The study of the Ca/Mg ratio of water samples can be used to indicate dissolution of calcite or dolomite
+- Geochemical modelling
 
----
 
-## 8. Software Stack
 
-### Python
-- pandas
-- geopandas
-- matplotlib
-- numpy
 
-### GIS
-- QGIS
+As hotspots (top 5%, red) among all cleaned sample points (Fig. 1).
 
-Optional:
-- shapely
+![Arsenic screening map](results/arsenic_screening_map.png)
 
----
 
-## 9. Deliverables
 
-1. Clean arsenic dataset  
-2. Hotspot classified GIS layer  
-3. Arsenic hotspot map  
-4. Groundwater screening map  
-5. Technical report PDF  
+| Class | Count | % of total |
+|---|---:|---:|
+| As hotspot (top 5%) | 1 394 | 4.98% |
+| U hotspot (top 5%) | 1 370 | 4.90% |
+| Priority 1 (both hotspots) | 137 | 0.49% |
+| Priority 2 (either hotspots) | 2 490 | 8.90% |
+| Background | 25 354 | 90.61% |
 
----
+**Table 2**: Point counts per class (relative percentile screening, n=27 981)
 
-## 10. Conclusion
+| Class | Count | % of total |
+|---|---:|---:|
+| Below KM (<10 ppm) | 25 862 | 92.42% |
+| KM-MKM (10-25 ppm) | 1 752 | 6.26% |
+| Above MKM (>25 ppm) | 367 | 1.31% |
 
+**Table 3**: Point counts per class (As vs. Naturvårdsverket guideline values, n=27 981)
+
+## 4. Discussion
+
+## 5. Limitations
+
+## 8. References
+
+- Lecomte, A., Cathelineau, M., Michels, R., Peiffert, C., Brouand, M. (2017). *Uranium mineralization in the Alum Shale Formation (Sweden).* **Ore Geology Reviews, 88**, 71–98.
+- Naturvårdsverket. *Riktvärden för förorenad mark.*
+- SGU. *Markgeokemi, regional provtagning.*
