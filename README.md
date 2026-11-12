@@ -6,11 +6,7 @@
 
 **1. Introduction**
 
-**Background**
-
-The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, the mineral composition of the catchment, water temperature, flow rate, the presence of a gas phase, and redox conditions. The process starts with the weathering of primary minerals. Over time, rocks and minerals at the Earth’s surface react with the atmosphere, water and living organisms.
-
-In most natural systems, the main source of protons (H⁺) is carbonic acid (H₂CO₃). It forms when soil CO₂ dissolves in water. Soil CO₂ is produced by the decomposition of organic matter and by root respiration. Its partial pressure in soil is higher than in the atmosphere. Protons attack mineral surfaces and release ions into solution. Secondary minerals, such as clays, then form by precipitation. Ion exchange, adsorption and desorption also control the dissolved ion content. Two examples are:
+The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, the mineral composition of the catchment, which in turn depend on water temperature, flow rate, the presence of a gas phase, and redox conditions. The process starts with the weathering of primary minerals. Over time, rocks and minerals at the Earth’s surface react with the atmosphere, water and living organisms. In most natural systems, the main source of protons (H⁺) is carbonic acid (H₂CO₃). It forms when soil CO₂ dissolves in water. Soil CO₂ is produced by the decomposition of organic matter and by root respiration. Its partial pressure in soil is higher than in the atmosphere. Protons attack mineral surfaces and release ions into solution. Secondary minerals, such as clays, then form by precipitation. Ion exchange, adsorption and desorption also control the dissolved ion content. Two examples are:
 
 Albite weathers to kaolinite:
 $2NaAlSi_3O_8 + 2CO_2 + 11H_2O \rightarrow Al_2Si_2O_5(OH)_4 + 2Na^+ + 2HCO_3^- + 4H_4SiO_4$
