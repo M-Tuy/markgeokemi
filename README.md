@@ -5,11 +5,8 @@
 ---
 
 ## 1. Introduction
+The chemitry of surface and groundwater results from interactions between many factors, including atmospheric input, climate and topography, and the local mineral composition and geochemical properties within the cathment.
 
--Autoregressive analyse
-
--Role of surface water
--The chemical composition of surface water is controlled by many factors, including composition of precipitation, mineralogy of the watershed, climate and topography, and input of chemicals derived from human activities
 
 -Hydrochemical processes involving precipitation and dissolution, ionic exchange, adsorption and desorption over time control the resulting changes in subsurface and surface flows. Therefore, spatial and temporal changes in water composition are attributed to these factors. Differences among waters in a watershed show the various steps of water–rock interaction (Federico et al. Citation2008).
 
