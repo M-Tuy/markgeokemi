@@ -29,18 +29,19 @@ This exercise repeats the study of Garrels and Mackenzie (1967) on two groundwat
 
 This exercise repeats the study of Garrels and Mackenzie (1967) on two groundwater springs in the Sierra Nevada. The ephemeral spring (solution 1) feeds the perennial spring (solution 2), which has reacted longer with the granitic bedrock. The aim is to find, with PHREEQC, the mineral and gas mole transfers that turn solution 1 into solution 2, and to judge which model is most reasonable.
 
-**Table 1 concentrations of some chemical species in the Sierra nevada springs** 
-|Species|Sol. 1: Ephemeral|Sol.2: Perennial|
-|---:|---:|---:|
-|pH|6.2|6.8|
-|$SiO_2$|0.273|0.410|
-|$Ca^2^+$|0.078|0.260|
-|$Mg^2$|0.029|0.071|
-|$Na^1$|0.134|0.259|
-|$K^1$|0.028|0.040|
-|$HCO_3^1$|0.328|0.895|
-|$SO_4^2^-$|0.010|0.025|
-|$Cl^-$|0.014|0.030|
+**Table 1. Concentrations of Some Chemical Species in the Sierra Nevada Springs**
+
+| Species | Sol. 1: Ephemeral | Sol. 2: Perennial |
+|:--------|------------------:|------------------:|
+| pH      | 6.2               | 6.8               |
+| $SiO_2$ | 0.273             | 0.410             |
+| $Ca^{2+}$ | 0.078           | 0.260             |
+| $Mg^{2+}$ | 0.029           | 0.071             |
+| $Na^{+}$  | 0.134           | 0.259             |
+| $K^{+}$   | 0.028           | 0.040             |
+| $HCO_3^{-}$ | 0.328         | 0.895             |
+| $SO_4^{2-}$ | 0.010         | 0.025             |
+| $Cl^{-}$  | 0.014            | 0.030             |
 
 Data source: Garrels and Mackenzie (1967). concentration are expressed in mM.
 
