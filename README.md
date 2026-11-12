@@ -12,19 +12,13 @@ The chemistry of surface water and groundwater results from many interacting fac
 
 **Albite weathers to kaolinite:**
 
-$2\,\mathrm{NaAlSi_3O_8} + 2\,\mathrm{CO_2} + 11\,\mathrm{H_2O} \rightarrow \mathrm{Al_2Si_2O_5(OH)_4} + 2\,\mathrm{Na^+} + 2\,\mathrm{HCO_3^-} + 4\,\mathrm{H_4SiO_4}$
+$$2NaAlSi_3O_8 + 2CO_2 + 11H_2O (H_2CO_3) \rightarrow Al_2Si_2O_5(OH)_4 + 2Na^+ + 2HCO_3 + 4H_4SiO_4$$ 
 
-**Calcite dissolves.** First, CO2 forms carbonic acid:
+**Calcite dissolves.**
 
-$\mathrm{CO_2} + \mathrm{H_2O} \rightleftharpoons \mathrm{H_2CO_3}$
+$$CO_2 + H_2O \rightleftharpoons H_2CO_3$$ CO_2 forms carbonic acid:
 
-Then carbonic acid dissolves calcite:
-
-$\mathrm{CaCO_3} + \mathrm{H_2CO_3} \rightarrow \mathrm{Ca^{2+}} + 2\,\mathrm{HCO_3^-}$
-
-Overall:
-
-$\mathrm{CaCO_3} + \mathrm{CO_2} + \mathrm{H_2O} \rightarrow \mathrm{Ca^{2+}} + 2\,\mathrm{HCO_3^-}$
+$$CaCO_3 + H_2CO_3 \rightarrow Ca^{2+} + 2HCO_3$$ carbonic acid dissolves calcite
 
 
 
