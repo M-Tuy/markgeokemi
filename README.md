@@ -25,19 +25,30 @@ Inverse modelling explains the water chemistry by mineral reactions and gas exch
 
 This exercise repeats the study of Garrels and Mackenzie (1967) on two groundwater springs in the Sierra Nevada. The ephemeral spring (solution 1) feeds the perennial spring (solution 2), which has reacted longer with the granitic bedrock. The aim is to find, with PHREEQC, the mineral and gas mole transfers that turn solution 1 into solution 2, and to judge which model is most reasonable.
 
-Reference
-
-Garrels, R.M. and Mackenzie, F.T. (1967). Origin of the chemical compositions of some springs and lakes. In: Equilibrium Concepts in Natural Water Systems, Advances in Chemistry 67, 222-242. American Chemical Society. https://doi.org/10.1021/ba-1967-0067.ch010
-
-
-
-
-
 ## 2. Data and Method
 
-**Data source:**
+This exercise repeats the study of Garrels and Mackenzie (1967) on two groundwater springs in the Sierra Nevada. The ephemeral spring (solution 1) feeds the perennial spring (solution 2), which has reacted longer with the granitic bedrock. The aim is to find, with PHREEQC, the mineral and gas mole transfers that turn solution 1 into solution 2, and to judge which model is most reasonable.
+
+**Table 1 concentrations of some chemical species in the Sierra nevada springs** 
+|Species|Sol. 1: Ephemeral|Sol.2: Perennial|
+|---:|---:|---:|
+|pH|6.2|6.8|
+|$SiO_2$|0.273|0.410|
+|$Ca^2$|0.078|0.260|
+|$Mg^2$|0.029|0.071|
+|$Na^1$|0.134|0.259|
+|$K^1$|0.028|0.040|
+|$HCO_3^1$|0.328|0.89|
+|$SO4_4^2-$|||
+|Cl^-|||
+
+Data source: Garrels and Mackenzie (1967). concentration are expressed in mM.
+
 
 **Site description and  and Hydrogeological description**
+
+
+
 ***Geology and Water-bearing formations and aquifer types***
 - The methods used in this study include, a light litterature review data analysis using various software packages
 
