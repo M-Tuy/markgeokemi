@@ -3,9 +3,6 @@
 **Author:** Marius Tuyishime. **Course: Geochemicalmodelling2026, exercise 5** 
 
 ---
-Inverse modelling of mineral reactions in groundwater using PHREEQC
-
-Author: Marius Tuyishime. Course: Geochemical modelling 2026, Exercise 5
 
 1. Introduction
 1.1 Background
