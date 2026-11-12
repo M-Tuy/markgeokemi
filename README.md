@@ -4,8 +4,9 @@
 
 ---
 
-1. Introduction
-1.1 Background
+**1. Introduction**
+
+**Background**
 
 The chemistry of surface water and groundwater results from many interacting factors. These include atmospheric input, climate, topography, the mineral composition of the catchment, water temperature, flow rate, the presence of a gas phase, and redox conditions. The process starts with the weathering of primary minerals. Over time, rocks and minerals at the Earth’s surface react with the atmosphere, water and living organisms.
 
