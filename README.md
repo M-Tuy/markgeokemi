@@ -119,4 +119,5 @@ Table: model 2
 
 ## 8. References
 
-- Lecomte, A., Cathelineau, M., Michels, R., Peiffert, C., Brouand, M. (2017). *Uranium mineralization in the Alum Shale Formation (Sweden).* **Ore Geology Reviews, 88**, 71–98.
+- Stumm, W. and Morgan, J.J. (1981). (Sweden)Aquatic Chemistry: An Introduction Emphasizing 
+Chemical Equilibria in Natural Waters.  2nd Edition, John Wiley & Sons Ltd., New York.
